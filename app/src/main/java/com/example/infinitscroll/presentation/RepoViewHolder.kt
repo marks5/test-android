@@ -47,7 +47,7 @@ class RepoViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
     private fun showRepoData(repo: Repo) {
         this.repo = repo
-        name.text = repo.fullName
+        name.text = "${repo.fullName} \nauthor: ${repo.owner.login}"
 
         var descriptionVisibility = View.GONE
         if (repo.description != null) {
