@@ -4,7 +4,6 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.paging.PagingData
 import com.example.infinitscroll.data.GithubRepository
 import com.example.infinitscroll.domain.Repo
-import com.example.infinitscroll.presentation.SearchRepositoriesViewModel
 import io.mockk.coEvery
 import io.mockk.coVerify
 import io.mockk.mockk
