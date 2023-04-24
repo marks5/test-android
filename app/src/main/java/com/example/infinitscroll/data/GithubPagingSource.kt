@@ -3,6 +3,7 @@ package com.example.infinitscroll.data
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import com.example.infinitscroll.data.GithubRepository.Companion.NETWORK_PAGE_SIZE
+import com.example.infinitscroll.data.remote.GithubAPI
 import com.example.infinitscroll.domain.Repo
 import retrofit2.HttpException
 import java.io.IOException
@@ -10,8 +11,8 @@ import java.io.IOException
 private const val GITHUB_STARTING_PAGE_INDEX = 1
 
 class GithubPagingSource(
-        private val service: GithubAPI,
-        private val query: String
+    private val service: GithubAPI,
+    private val query: String
 ) : PagingSource<Int, Repo>() {
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, Repo> {
         val position = params.key ?: GITHUB_STARTING_PAGE_INDEX

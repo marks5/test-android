@@ -3,6 +3,7 @@ package com.example.infinitscroll.data
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
+import com.example.infinitscroll.data.remote.GithubAPI
 import com.example.infinitscroll.domain.Repo
 import kotlinx.coroutines.flow.Flow
 
