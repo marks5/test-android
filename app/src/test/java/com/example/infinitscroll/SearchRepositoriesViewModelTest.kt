@@ -2,7 +2,6 @@ package com.example.infinitscroll
 
 import androidx.lifecycle.SavedStateHandle
 import androidx.paging.PagingData
-import com.example.infinitscroll.data.GithubRepository
 import com.example.infinitscroll.domain.Repo
 import io.mockk.coEvery
 import io.mockk.coVerify

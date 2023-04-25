@@ -17,7 +17,6 @@ class GithubRepository @Inject constructor(
     private val githubAPI: GithubAPI,
     private val githubDatabase: GithubDatabase
 ) {
-
     fun getAllPages(): Flow<PagingData<Repo>> {
         val pagingSourceFactory = { githubDatabase.repoDao().getGithub()}
         return Pager(

@@ -10,7 +10,6 @@ import com.example.infinitscroll.data.remote.GithubAPI
 import com.example.infinitscroll.domain.GithubRemoteKeys
 import com.example.infinitscroll.domain.Repo
 import com.example.infinitscroll.util.Constants.ITEMS_PER_PAGE
-import com.example.infinitscroll.util.Constants.QUERY_PAGE
 import javax.inject.Inject
 
 @ExperimentalPagingApi
@@ -51,8 +50,7 @@ class GithubRemoteMediator @Inject constructor(
             }
 
             val response = githubAPI.searchRepos(page = currentPage,
-                itemsPerPage = ITEMS_PER_PAGE,
-                query = QUERY_PAGE)
+                itemsPerPage = ITEMS_PER_PAGE)
             val endOfPaginationReached = response.items.isEmpty()
 
             val prevPage = if (currentPage == 1) null else currentPage - 1
@@ -65,7 +63,7 @@ class GithubRemoteMediator @Inject constructor(
                 }
                 val keys = response.items.map { each ->
                     GithubRemoteKeys(
-                        id = each.id.toString(),
+                        id = each.id,
                         prevPage = prevPage,
                         nextPage = nextPage
                     )
@@ -84,7 +82,7 @@ class GithubRemoteMediator @Inject constructor(
     ): GithubRemoteKeys? {
         return state.anchorPosition?.let { position ->
             state.closestItemToPosition(position)?.id?.let { id ->
-                githubRemoteKeysDao.getRemoteKeys(id = id.toString())
+                githubRemoteKeysDao.getRemoteKeys(id = id)
             }
         }
     }
@@ -94,7 +92,7 @@ class GithubRemoteMediator @Inject constructor(
     ): GithubRemoteKeys? {
         return state.pages.firstOrNull { it.data.isNotEmpty() }?.data?.firstOrNull()
             ?.let { each ->
-                githubRemoteKeysDao.getRemoteKeys(id = each.id.toString())
+                githubRemoteKeysDao.getRemoteKeys(id = each.id)
             }
     }
 
@@ -103,7 +101,7 @@ class GithubRemoteMediator @Inject constructor(
     ): GithubRemoteKeys? {
         return state.pages.lastOrNull { it.data.isNotEmpty() }?.data?.lastOrNull()
             ?.let { each ->
-                githubRemoteKeysDao.getRemoteKeys(id = each.id.toString())
+                githubRemoteKeysDao.getRemoteKeys(id = each.id)
             }
     }
 }

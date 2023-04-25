@@ -9,7 +9,7 @@ import com.example.infinitscroll.domain.GithubRemoteKeys
 @Dao
 interface GithubRemoteKeysDao {
     @Query("SELECT * FROM github_remote_keys_table WHERE id =:id")
-    fun getRemoteKeys(id: String): GithubRemoteKeys
+    fun getRemoteKeys(id: Long): GithubRemoteKeys
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun addAllRemoteKeys(remotekeys: List<GithubRemoteKeys>)

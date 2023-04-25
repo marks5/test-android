@@ -11,14 +11,12 @@ import kotlinx.serialization.Serializable
 @Entity(tableName = Constants.GITHUB_TABLE)
 data class Repo(
     @PrimaryKey(autoGenerate = false)
-    val id: Int,
+    val id: Long,
     @SerialName("full_name")
     val fullName: String,
     @Embedded
     @SerialName("owner")
     val owner: Owner,
-    @SerialName("description")
-    val description: String,
     @SerialName("fork")
     val fork: Boolean,
     @SerialName("forks_url")

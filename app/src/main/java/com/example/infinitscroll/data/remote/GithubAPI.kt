@@ -9,9 +9,8 @@ import retrofit2.http.Query
 
 interface GithubAPI {
 
-    @GET("search/repositories?sort=stars")
+    @GET("search/repositories?sort=stars&q=language:kotlin")
     suspend fun searchRepos(
-        @Query("q") query: String,
         @Query("page") page: Int,
         @Query("per_page") itemsPerPage: Int
     ): Root

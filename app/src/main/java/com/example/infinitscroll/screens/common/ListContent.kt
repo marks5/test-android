@@ -38,8 +38,8 @@ fun ListContent(items: LazyPagingItems<Repo>) {
             key = { repo ->
                 repo.id
             }
-        ) { unsplashImage ->
-            unsplashImage?.let { RepoItem(repo = it) }
+        ) { each ->
+            each?.let { RepoItem(repo = it) }
         }
     }
 }
@@ -91,51 +91,6 @@ fun RepoItem(repo: Repo) {
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis
             )
-//            LikeCounter(
-//                modifier = Modifier.weight(3f),
-//                painter = painterResource(id = R.drawable.ic_heart),
-//                likes = "${unsplashImage.likes}"
-//            )
         }
     }
 }
-
-//@Composable
-//fun LikeCounter(
-//    modifier: Modifier,
-//    painter: Painter,
-//    likes: String
-//) {
-//    Row(
-//        modifier = modifier.fillMaxSize(),
-//        verticalAlignment = Alignment.CenterVertically,
-//        horizontalArrangement = Arrangement.End
-//    ) {
-//        Icon(
-//            painter = painter,
-//            contentDescription = "Heart Icon",
-//            tint = HeartRed
-//        )
-//        Divider(modifier = Modifier.width(6.dp))
-//        Text(
-//            text = likes,
-//            color = Color.White,
-//            fontSize = MaterialTheme.typography.subtitle1.fontSize,
-//            fontWeight = FontWeight.Bold,
-//            maxLines = 1,
-//            overflow = TextOverflow.Ellipsis
-//        )
-//    }
-//}
-//
-//@ExperimentalCoilApi
-//@Composable
-//@Preview
-//fun UnsplashImagePreview() {
-//    RepoItem(
-//        repo = Repo(
-//            id = "1",
-//            url = "",
-//        )
-//    )
-//}

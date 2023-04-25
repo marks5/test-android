@@ -24,6 +24,6 @@ object DatabaseModule {
             context,
             GithubDatabase::class.java,
             GITHUB_DATABASE
-        ).build()
+        ).allowMainThreadQueries().build()
     }
 }

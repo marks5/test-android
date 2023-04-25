@@ -2,11 +2,11 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "8ad10160396914cbfcdce9df4adb305a",
+    "identityHash": "dc0c23ec7ea39d277c71fd317688e026",
     "entities": [
       {
         "tableName": "GITHUB_TABLE",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `fullName` TEXT NOT NULL, `description` TEXT NOT NULL, `fork` INTEGER NOT NULL, `forksUrl` TEXT NOT NULL, `keysUrl` TEXT NOT NULL, `collaboratorsUrl` TEXT NOT NULL, `teamsUrl` TEXT NOT NULL, `hooksUrl` TEXT NOT NULL, `issueEventsUrl` TEXT NOT NULL, `eventsUrl` TEXT NOT NULL, `assigneesUrl` TEXT NOT NULL, `branchesUrl` TEXT NOT NULL, `tagsUrl` TEXT NOT NULL, `blobsUrl` TEXT NOT NULL, `gitTagsUrl` TEXT NOT NULL, `gitRefsUrl` TEXT NOT NULL, `treesUrl` TEXT NOT NULL, `statusesUrl` TEXT NOT NULL, `languagesUrl` TEXT NOT NULL, `stargazersUrl` TEXT NOT NULL, `contributorsUrl` TEXT NOT NULL, `subscribersUrl` TEXT NOT NULL, `subscriptionUrl` TEXT NOT NULL, `commitsUrl` TEXT NOT NULL, `gitCommitsUrl` TEXT NOT NULL, `commentsUrl` TEXT NOT NULL, `issueCommentUrl` TEXT NOT NULL, `contentsUrl` TEXT NOT NULL, `compareUrl` TEXT NOT NULL, `mergesUrl` TEXT NOT NULL, `archiveUrl` TEXT NOT NULL, `downloadsUrl` TEXT NOT NULL, `issuesUrl` TEXT NOT NULL, `pullsUrl` TEXT NOT NULL, `milestonesUrl` TEXT NOT NULL, `notificationsUrl` TEXT NOT NULL, `labelsUrl` TEXT NOT NULL, `releasesUrl` TEXT NOT NULL, `deploymentsUrl` TEXT NOT NULL, `createdAt` TEXT NOT NULL, `updatedAt` TEXT NOT NULL, `pushedAt` TEXT NOT NULL, `gitUrl` TEXT NOT NULL, `sshUrl` TEXT NOT NULL, `cloneUrl` TEXT NOT NULL, `stargazersCount` INTEGER NOT NULL, `login` TEXT NOT NULL, `avatarUrl` TEXT NOT NULL, `gravatarId` TEXT NOT NULL, `htmlUrl` TEXT NOT NULL, `followersUrl` TEXT NOT NULL, `followingUrl` TEXT NOT NULL, `gistsUrl` TEXT NOT NULL, `starredUrl` TEXT NOT NULL, `subscriptionsUrl` TEXT NOT NULL, `organizationsUrl` TEXT NOT NULL, `reposUrl` TEXT NOT NULL, `receivedEventsUrl` TEXT NOT NULL, `type` TEXT NOT NULL, `siteAdmin` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `fullName` TEXT NOT NULL, `fork` INTEGER NOT NULL, `forksUrl` TEXT NOT NULL, `keysUrl` TEXT NOT NULL, `collaboratorsUrl` TEXT NOT NULL, `teamsUrl` TEXT NOT NULL, `hooksUrl` TEXT NOT NULL, `issueEventsUrl` TEXT NOT NULL, `eventsUrl` TEXT NOT NULL, `assigneesUrl` TEXT NOT NULL, `branchesUrl` TEXT NOT NULL, `tagsUrl` TEXT NOT NULL, `blobsUrl` TEXT NOT NULL, `gitTagsUrl` TEXT NOT NULL, `gitRefsUrl` TEXT NOT NULL, `treesUrl` TEXT NOT NULL, `statusesUrl` TEXT NOT NULL, `languagesUrl` TEXT NOT NULL, `stargazersUrl` TEXT NOT NULL, `contributorsUrl` TEXT NOT NULL, `subscribersUrl` TEXT NOT NULL, `subscriptionUrl` TEXT NOT NULL, `commitsUrl` TEXT NOT NULL, `gitCommitsUrl` TEXT NOT NULL, `commentsUrl` TEXT NOT NULL, `issueCommentUrl` TEXT NOT NULL, `contentsUrl` TEXT NOT NULL, `compareUrl` TEXT NOT NULL, `mergesUrl` TEXT NOT NULL, `archiveUrl` TEXT NOT NULL, `downloadsUrl` TEXT NOT NULL, `issuesUrl` TEXT NOT NULL, `pullsUrl` TEXT NOT NULL, `milestonesUrl` TEXT NOT NULL, `notificationsUrl` TEXT NOT NULL, `labelsUrl` TEXT NOT NULL, `releasesUrl` TEXT NOT NULL, `deploymentsUrl` TEXT NOT NULL, `createdAt` TEXT NOT NULL, `updatedAt` TEXT NOT NULL, `pushedAt` TEXT NOT NULL, `gitUrl` TEXT NOT NULL, `sshUrl` TEXT NOT NULL, `cloneUrl` TEXT NOT NULL, `stargazersCount` INTEGER NOT NULL, `login` TEXT NOT NULL, `avatarUrl` TEXT NOT NULL, `gravatarId` TEXT NOT NULL, `htmlUrl` TEXT NOT NULL, `followersUrl` TEXT NOT NULL, `followingUrl` TEXT NOT NULL, `gistsUrl` TEXT NOT NULL, `starredUrl` TEXT NOT NULL, `subscriptionsUrl` TEXT NOT NULL, `organizationsUrl` TEXT NOT NULL, `reposUrl` TEXT NOT NULL, `receivedEventsUrl` TEXT NOT NULL, `type` TEXT NOT NULL, `siteAdmin` INTEGER NOT NULL, PRIMARY KEY(`id`))",
         "fields": [
           {
             "fieldPath": "id",
@@ -17,12 +17,6 @@
           {
             "fieldPath": "fullName",
             "columnName": "fullName",
-            "affinity": "TEXT",
-            "notNull": true
-          },
-          {
-            "fieldPath": "description",
-            "columnName": "description",
             "affinity": "TEXT",
             "notNull": true
           },
@@ -386,12 +380,12 @@
       },
       {
         "tableName": "GITHUB_REMOTE_KEYS_TABLE",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `prevPage` INTEGER, `nextPage` INTEGER, PRIMARY KEY(`id`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `prevPage` INTEGER, `nextPage` INTEGER, PRIMARY KEY(`id`))",
         "fields": [
           {
             "fieldPath": "id",
             "columnName": "id",
-            "affinity": "TEXT",
+            "affinity": "INTEGER",
             "notNull": true
           },
           {
@@ -420,7 +414,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '8ad10160396914cbfcdce9df4adb305a')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'dc0c23ec7ea39d277c71fd317688e026')"
     ]
   }
 }
