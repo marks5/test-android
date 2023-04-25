@@ -83,7 +83,7 @@ fun RepoItem(repo: Repo) {
                 text = buildAnnotatedString {
                     append("Author: ")
                     withStyle(style = SpanStyle(fontWeight = FontWeight.Black)) {
-                        append(repo.fullName)
+                        repo.fullName?.let { append(it) }
                     }
                 },
                 color = Color.White,

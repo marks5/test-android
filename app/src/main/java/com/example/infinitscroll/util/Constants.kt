@@ -5,5 +5,5 @@ object Constants {
     const val GITHUB_TABLE = "GITHUB_TABLE"
     const val GITHUB_REMOTE_KEYS_TABLE = "GITHUB_REMOTE_KEYS_TABLE"
     const val GITHUB_DATABASE = "GITHUB_DATABASE"
-    const val ITEMS_PER_PAGE = 50
+    const val ITEMS_PER_PAGE = 30
 }

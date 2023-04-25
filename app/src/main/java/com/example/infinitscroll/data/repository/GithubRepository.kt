@@ -20,7 +20,11 @@ class GithubRepository @Inject constructor(
     fun getAllPages(): Flow<PagingData<Repo>> {
         val pagingSourceFactory = { githubDatabase.repoDao().getGithub()}
         return Pager(
-            config = PagingConfig(pageSize = ITEMS_PER_PAGE),
+            config = PagingConfig(
+                pageSize = ITEMS_PER_PAGE,
+                prefetchDistance = 10,
+                initialLoadSize = ITEMS_PER_PAGE * 3
+            ),
             remoteMediator = GithubRemoteMediator(
                 githubAPI = githubAPI,
                 githubDatabase = githubDatabase

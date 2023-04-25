@@ -1,12 +1,12 @@
 package com.example.infinitscroll.domain
 
-import kotlinx.serialization.SerialName
+import com.google.gson.annotations.SerializedName
 import kotlinx.serialization.Serializable
 
 @Serializable
 data class Root(
-    @SerialName("total_count") val total: Int = 0,
-    @SerialName("items") val items: List<Repo> = emptyList(),
+    @SerializedName("total_count") val total: Int = 0,
+    @SerializedName("items") val items: List<Repo> = emptyList(),
     val nextPage: Int? = null
 )
 

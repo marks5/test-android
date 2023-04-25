@@ -2,11 +2,11 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "dc0c23ec7ea39d277c71fd317688e026",
+    "identityHash": "9ded4d1116e44edc466aafa8101776e8",
     "entities": [
       {
         "tableName": "GITHUB_TABLE",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `fullName` TEXT NOT NULL, `fork` INTEGER NOT NULL, `forksUrl` TEXT NOT NULL, `keysUrl` TEXT NOT NULL, `collaboratorsUrl` TEXT NOT NULL, `teamsUrl` TEXT NOT NULL, `hooksUrl` TEXT NOT NULL, `issueEventsUrl` TEXT NOT NULL, `eventsUrl` TEXT NOT NULL, `assigneesUrl` TEXT NOT NULL, `branchesUrl` TEXT NOT NULL, `tagsUrl` TEXT NOT NULL, `blobsUrl` TEXT NOT NULL, `gitTagsUrl` TEXT NOT NULL, `gitRefsUrl` TEXT NOT NULL, `treesUrl` TEXT NOT NULL, `statusesUrl` TEXT NOT NULL, `languagesUrl` TEXT NOT NULL, `stargazersUrl` TEXT NOT NULL, `contributorsUrl` TEXT NOT NULL, `subscribersUrl` TEXT NOT NULL, `subscriptionUrl` TEXT NOT NULL, `commitsUrl` TEXT NOT NULL, `gitCommitsUrl` TEXT NOT NULL, `commentsUrl` TEXT NOT NULL, `issueCommentUrl` TEXT NOT NULL, `contentsUrl` TEXT NOT NULL, `compareUrl` TEXT NOT NULL, `mergesUrl` TEXT NOT NULL, `archiveUrl` TEXT NOT NULL, `downloadsUrl` TEXT NOT NULL, `issuesUrl` TEXT NOT NULL, `pullsUrl` TEXT NOT NULL, `milestonesUrl` TEXT NOT NULL, `notificationsUrl` TEXT NOT NULL, `labelsUrl` TEXT NOT NULL, `releasesUrl` TEXT NOT NULL, `deploymentsUrl` TEXT NOT NULL, `createdAt` TEXT NOT NULL, `updatedAt` TEXT NOT NULL, `pushedAt` TEXT NOT NULL, `gitUrl` TEXT NOT NULL, `sshUrl` TEXT NOT NULL, `cloneUrl` TEXT NOT NULL, `stargazersCount` INTEGER NOT NULL, `login` TEXT NOT NULL, `avatarUrl` TEXT NOT NULL, `gravatarId` TEXT NOT NULL, `htmlUrl` TEXT NOT NULL, `followersUrl` TEXT NOT NULL, `followingUrl` TEXT NOT NULL, `gistsUrl` TEXT NOT NULL, `starredUrl` TEXT NOT NULL, `subscriptionsUrl` TEXT NOT NULL, `organizationsUrl` TEXT NOT NULL, `reposUrl` TEXT NOT NULL, `receivedEventsUrl` TEXT NOT NULL, `type` TEXT NOT NULL, `siteAdmin` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `fullName` TEXT, `fork` INTEGER, `forksUrl` TEXT, `keysUrl` TEXT, `collaboratorsUrl` TEXT, `teamsUrl` TEXT, `hooksUrl` TEXT, `issueEventsUrl` TEXT, `eventsUrl` TEXT, `assigneesUrl` TEXT, `branchesUrl` TEXT, `tagsUrl` TEXT, `blobsUrl` TEXT, `gitTagsUrl` TEXT, `gitRefsUrl` TEXT, `treesUrl` TEXT, `statusesUrl` TEXT, `languagesUrl` TEXT, `stargazersUrl` TEXT, `contributorsUrl` TEXT, `subscribersUrl` TEXT, `subscriptionUrl` TEXT, `commitsUrl` TEXT, `gitCommitsUrl` TEXT, `commentsUrl` TEXT, `issueCommentUrl` TEXT, `contentsUrl` TEXT, `compareUrl` TEXT, `mergesUrl` TEXT, `archiveUrl` TEXT, `downloadsUrl` TEXT, `issuesUrl` TEXT, `pullsUrl` TEXT, `milestonesUrl` TEXT, `notificationsUrl` TEXT, `labelsUrl` TEXT, `releasesUrl` TEXT, `deploymentsUrl` TEXT, `createdAt` TEXT, `updatedAt` TEXT, `pushedAt` TEXT, `gitUrl` TEXT, `sshUrl` TEXT, `cloneUrl` TEXT, `stargazersCount` INTEGER, `login` TEXT, `avatarUrl` TEXT, `gravatarId` TEXT, `htmlUrl` TEXT, `followersUrl` TEXT, `followingUrl` TEXT, `gistsUrl` TEXT, `starredUrl` TEXT, `subscriptionsUrl` TEXT, `organizationsUrl` TEXT, `reposUrl` TEXT, `receivedEventsUrl` TEXT, `siteAdmin` INTEGER, PRIMARY KEY(`id`))",
         "fields": [
           {
             "fieldPath": "id",
@@ -18,355 +18,349 @@
             "fieldPath": "fullName",
             "columnName": "fullName",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "fork",
             "columnName": "fork",
             "affinity": "INTEGER",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "forksUrl",
             "columnName": "forksUrl",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "keysUrl",
             "columnName": "keysUrl",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "collaboratorsUrl",
             "columnName": "collaboratorsUrl",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "teamsUrl",
             "columnName": "teamsUrl",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "hooksUrl",
             "columnName": "hooksUrl",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "issueEventsUrl",
             "columnName": "issueEventsUrl",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "eventsUrl",
             "columnName": "eventsUrl",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "assigneesUrl",
             "columnName": "assigneesUrl",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "branchesUrl",
             "columnName": "branchesUrl",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "tagsUrl",
             "columnName": "tagsUrl",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "blobsUrl",
             "columnName": "blobsUrl",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "gitTagsUrl",
             "columnName": "gitTagsUrl",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "gitRefsUrl",
             "columnName": "gitRefsUrl",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "treesUrl",
             "columnName": "treesUrl",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "statusesUrl",
             "columnName": "statusesUrl",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "languagesUrl",
             "columnName": "languagesUrl",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "stargazersUrl",
             "columnName": "stargazersUrl",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "contributorsUrl",
             "columnName": "contributorsUrl",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "subscribersUrl",
             "columnName": "subscribersUrl",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "subscriptionUrl",
             "columnName": "subscriptionUrl",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "commitsUrl",
             "columnName": "commitsUrl",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "gitCommitsUrl",
             "columnName": "gitCommitsUrl",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "commentsUrl",
             "columnName": "commentsUrl",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "issueCommentUrl",
             "columnName": "issueCommentUrl",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "contentsUrl",
             "columnName": "contentsUrl",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "compareUrl",
             "columnName": "compareUrl",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "mergesUrl",
             "columnName": "mergesUrl",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "archiveUrl",
             "columnName": "archiveUrl",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "downloadsUrl",
             "columnName": "downloadsUrl",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "issuesUrl",
             "columnName": "issuesUrl",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "pullsUrl",
             "columnName": "pullsUrl",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "milestonesUrl",
             "columnName": "milestonesUrl",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "notificationsUrl",
             "columnName": "notificationsUrl",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "labelsUrl",
             "columnName": "labelsUrl",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "releasesUrl",
             "columnName": "releasesUrl",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "deploymentsUrl",
             "columnName": "deploymentsUrl",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "createdAt",
             "columnName": "createdAt",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "updatedAt",
             "columnName": "updatedAt",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "pushedAt",
             "columnName": "pushedAt",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "gitUrl",
             "columnName": "gitUrl",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "sshUrl",
             "columnName": "sshUrl",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "cloneUrl",
             "columnName": "cloneUrl",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "stargazersCount",
             "columnName": "stargazersCount",
             "affinity": "INTEGER",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "owner.login",
             "columnName": "login",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "owner.avatarUrl",
             "columnName": "avatarUrl",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "owner.gravatarId",
             "columnName": "gravatarId",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "owner.htmlUrl",
             "columnName": "htmlUrl",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "owner.followersUrl",
             "columnName": "followersUrl",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "owner.followingUrl",
             "columnName": "followingUrl",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "owner.gistsUrl",
             "columnName": "gistsUrl",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "owner.starredUrl",
             "columnName": "starredUrl",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "owner.subscriptionsUrl",
             "columnName": "subscriptionsUrl",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "owner.organizationsUrl",
             "columnName": "organizationsUrl",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "owner.reposUrl",
             "columnName": "reposUrl",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "owner.receivedEventsUrl",
             "columnName": "receivedEventsUrl",
             "affinity": "TEXT",
-            "notNull": true
-          },
-          {
-            "fieldPath": "owner.type",
-            "columnName": "type",
-            "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "owner.siteAdmin",
             "columnName": "siteAdmin",
             "affinity": "INTEGER",
-            "notNull": true
+            "notNull": false
           }
         ],
         "primaryKey": {
@@ -414,7 +408,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'dc0c23ec7ea39d277c71fd317688e026')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '9ded4d1116e44edc466aafa8101776e8')"
     ]
   }
 }
