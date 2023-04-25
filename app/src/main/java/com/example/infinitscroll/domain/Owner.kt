@@ -6,14 +6,10 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class Owner(
     val login: String,
-    val id: Long,
-    @SerialName("node_id")
-    val nodeId: String,
     @SerialName("avatar_url")
     val avatarUrl: String,
     @SerialName("gravatar_id")
     val gravatarId: String,
-    val url: String,
     @SerialName("html_url")
     val htmlUrl: String,
     @SerialName("followers_url")
@@ -30,8 +26,6 @@ data class Owner(
     val organizationsUrl: String,
     @SerialName("repos_url")
     val reposUrl: String,
-    @SerialName("events_url")
-    val eventsUrl: String,
     @SerialName("received_events_url")
     val receivedEventsUrl: String,
     val type: String,

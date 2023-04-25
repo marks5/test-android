@@ -1,0 +1,426 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "8ad10160396914cbfcdce9df4adb305a",
+    "entities": [
+      {
+        "tableName": "GITHUB_TABLE",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `fullName` TEXT NOT NULL, `description` TEXT NOT NULL, `fork` INTEGER NOT NULL, `forksUrl` TEXT NOT NULL, `keysUrl` TEXT NOT NULL, `collaboratorsUrl` TEXT NOT NULL, `teamsUrl` TEXT NOT NULL, `hooksUrl` TEXT NOT NULL, `issueEventsUrl` TEXT NOT NULL, `eventsUrl` TEXT NOT NULL, `assigneesUrl` TEXT NOT NULL, `branchesUrl` TEXT NOT NULL, `tagsUrl` TEXT NOT NULL, `blobsUrl` TEXT NOT NULL, `gitTagsUrl` TEXT NOT NULL, `gitRefsUrl` TEXT NOT NULL, `treesUrl` TEXT NOT NULL, `statusesUrl` TEXT NOT NULL, `languagesUrl` TEXT NOT NULL, `stargazersUrl` TEXT NOT NULL, `contributorsUrl` TEXT NOT NULL, `subscribersUrl` TEXT NOT NULL, `subscriptionUrl` TEXT NOT NULL, `commitsUrl` TEXT NOT NULL, `gitCommitsUrl` TEXT NOT NULL, `commentsUrl` TEXT NOT NULL, `issueCommentUrl` TEXT NOT NULL, `contentsUrl` TEXT NOT NULL, `compareUrl` TEXT NOT NULL, `mergesUrl` TEXT NOT NULL, `archiveUrl` TEXT NOT NULL, `downloadsUrl` TEXT NOT NULL, `issuesUrl` TEXT NOT NULL, `pullsUrl` TEXT NOT NULL, `milestonesUrl` TEXT NOT NULL, `notificationsUrl` TEXT NOT NULL, `labelsUrl` TEXT NOT NULL, `releasesUrl` TEXT NOT NULL, `deploymentsUrl` TEXT NOT NULL, `createdAt` TEXT NOT NULL, `updatedAt` TEXT NOT NULL, `pushedAt` TEXT NOT NULL, `gitUrl` TEXT NOT NULL, `sshUrl` TEXT NOT NULL, `cloneUrl` TEXT NOT NULL, `stargazersCount` INTEGER NOT NULL, `login` TEXT NOT NULL, `avatarUrl` TEXT NOT NULL, `gravatarId` TEXT NOT NULL, `htmlUrl` TEXT NOT NULL, `followersUrl` TEXT NOT NULL, `followingUrl` TEXT NOT NULL, `gistsUrl` TEXT NOT NULL, `starredUrl` TEXT NOT NULL, `subscriptionsUrl` TEXT NOT NULL, `organizationsUrl` TEXT NOT NULL, `reposUrl` TEXT NOT NULL, `receivedEventsUrl` TEXT NOT NULL, `type` TEXT NOT NULL, `siteAdmin` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fullName",
+            "columnName": "fullName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "description",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fork",
+            "columnName": "fork",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "forksUrl",
+            "columnName": "forksUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "keysUrl",
+            "columnName": "keysUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "collaboratorsUrl",
+            "columnName": "collaboratorsUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "teamsUrl",
+            "columnName": "teamsUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "hooksUrl",
+            "columnName": "hooksUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "issueEventsUrl",
+            "columnName": "issueEventsUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "eventsUrl",
+            "columnName": "eventsUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "assigneesUrl",
+            "columnName": "assigneesUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "branchesUrl",
+            "columnName": "branchesUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tagsUrl",
+            "columnName": "tagsUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "blobsUrl",
+            "columnName": "blobsUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "gitTagsUrl",
+            "columnName": "gitTagsUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "gitRefsUrl",
+            "columnName": "gitRefsUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "treesUrl",
+            "columnName": "treesUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "statusesUrl",
+            "columnName": "statusesUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "languagesUrl",
+            "columnName": "languagesUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "stargazersUrl",
+            "columnName": "stargazersUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "contributorsUrl",
+            "columnName": "contributorsUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "subscribersUrl",
+            "columnName": "subscribersUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "subscriptionUrl",
+            "columnName": "subscriptionUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "commitsUrl",
+            "columnName": "commitsUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "gitCommitsUrl",
+            "columnName": "gitCommitsUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "commentsUrl",
+            "columnName": "commentsUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "issueCommentUrl",
+            "columnName": "issueCommentUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "contentsUrl",
+            "columnName": "contentsUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "compareUrl",
+            "columnName": "compareUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mergesUrl",
+            "columnName": "mergesUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "archiveUrl",
+            "columnName": "archiveUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "downloadsUrl",
+            "columnName": "downloadsUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "issuesUrl",
+            "columnName": "issuesUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pullsUrl",
+            "columnName": "pullsUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "milestonesUrl",
+            "columnName": "milestonesUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "notificationsUrl",
+            "columnName": "notificationsUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "labelsUrl",
+            "columnName": "labelsUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "releasesUrl",
+            "columnName": "releasesUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "deploymentsUrl",
+            "columnName": "deploymentsUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAt",
+            "columnName": "updatedAt",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pushedAt",
+            "columnName": "pushedAt",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "gitUrl",
+            "columnName": "gitUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sshUrl",
+            "columnName": "sshUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cloneUrl",
+            "columnName": "cloneUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "stargazersCount",
+            "columnName": "stargazersCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "owner.login",
+            "columnName": "login",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "owner.avatarUrl",
+            "columnName": "avatarUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "owner.gravatarId",
+            "columnName": "gravatarId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "owner.htmlUrl",
+            "columnName": "htmlUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "owner.followersUrl",
+            "columnName": "followersUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "owner.followingUrl",
+            "columnName": "followingUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "owner.gistsUrl",
+            "columnName": "gistsUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "owner.starredUrl",
+            "columnName": "starredUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "owner.subscriptionsUrl",
+            "columnName": "subscriptionsUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "owner.organizationsUrl",
+            "columnName": "organizationsUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "owner.reposUrl",
+            "columnName": "reposUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "owner.receivedEventsUrl",
+            "columnName": "receivedEventsUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "owner.type",
+            "columnName": "type",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "owner.siteAdmin",
+            "columnName": "siteAdmin",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "GITHUB_REMOTE_KEYS_TABLE",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `prevPage` INTEGER, `nextPage` INTEGER, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "prevPage",
+            "columnName": "prevPage",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "nextPage",
+            "columnName": "nextPage",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '8ad10160396914cbfcdce9df4adb305a')"
+    ]
+  }
+}

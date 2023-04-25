@@ -65,7 +65,7 @@ class GithubRemoteMediator @Inject constructor(
                 }
                 val keys = response.items.map { each ->
                     GithubRemoteKeys(
-                        id = each.id,
+                        id = each.id.toString(),
                         prevPage = prevPage,
                         nextPage = nextPage
                     )
@@ -84,7 +84,7 @@ class GithubRemoteMediator @Inject constructor(
     ): GithubRemoteKeys? {
         return state.anchorPosition?.let { position ->
             state.closestItemToPosition(position)?.id?.let { id ->
-                githubRemoteKeysDao.getRemoteKeys(id = id)
+                githubRemoteKeysDao.getRemoteKeys(id = id.toString())
             }
         }
     }
@@ -93,8 +93,8 @@ class GithubRemoteMediator @Inject constructor(
         state: PagingState<Int, Repo>
     ): GithubRemoteKeys? {
         return state.pages.firstOrNull { it.data.isNotEmpty() }?.data?.firstOrNull()
-            ?.let { unsplashImage ->
-                githubRemoteKeysDao.getRemoteKeys(id = unsplashImage.id)
+            ?.let { each ->
+                githubRemoteKeysDao.getRemoteKeys(id = each.id.toString())
             }
     }
 
@@ -102,8 +102,8 @@ class GithubRemoteMediator @Inject constructor(
         state: PagingState<Int, Repo>
     ): GithubRemoteKeys? {
         return state.pages.lastOrNull { it.data.isNotEmpty() }?.data?.lastOrNull()
-            ?.let { unsplashImage ->
-                githubRemoteKeysDao.getRemoteKeys(id = unsplashImage.id)
+            ?.let { each ->
+                githubRemoteKeysDao.getRemoteKeys(id = each.id.toString())
             }
     }
 }

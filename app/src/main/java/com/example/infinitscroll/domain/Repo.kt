@@ -11,20 +11,16 @@ import kotlinx.serialization.Serializable
 @Entity(tableName = Constants.GITHUB_TABLE)
 data class Repo(
     @PrimaryKey(autoGenerate = false)
-    val id: String,
-    @SerialName("node_id")
-    val nodeId: String,
-    val name: String,
+    val id: Int,
     @SerialName("full_name")
     val fullName: String,
-    val private: Boolean,
     @Embedded
+    @SerialName("owner")
     val owner: Owner,
-    @SerialName("html_url")
-    val htmlUrl: String,
+    @SerialName("description")
     val description: String,
+    @SerialName("fork")
     val fork: Boolean,
-    val url: String,
     @SerialName("forks_url")
     val forksUrl: String,
     @SerialName("keys_url")
@@ -109,48 +105,6 @@ data class Repo(
     val sshUrl: String,
     @SerialName("clone_url")
     val cloneUrl: String,
-    @SerialName("svn_url")
-    val svnUrl: String,
-    val homepage: String?,
-    val size: Long,
     @SerialName("stargazers_count")
     val stargazersCount: Long,
-    @SerialName("watchers_count")
-    val watchersCount: Long,
-    val language: String,
-    @SerialName("has_issues")
-    val hasIssues: Boolean,
-    @SerialName("has_projects")
-    val hasProjects: Boolean,
-    @SerialName("has_downloads")
-    val hasDownloads: Boolean,
-    @SerialName("has_wiki")
-    val hasWiki: Boolean,
-    @SerialName("has_pages")
-    val hasPages: Boolean,
-    @SerialName("has_discussions")
-    val hasDiscussions: Boolean,
-    @SerialName("forks_count")
-    val forksCount: Long,
-    val archived: Boolean,
-    val disabled: Boolean,
-    @SerialName("open_issues_count")
-    val openIssuesCount: Long,
-    @Embedded
-    val license: License?,
-    @SerialName("allow_forking")
-    val allowForking: Boolean,
-    @SerialName("is_template")
-    val isTemplate: Boolean,
-    @SerialName("web_commit_signoff_required")
-    val webCommitSignoffRequired: Boolean,
-    val topics: List<String>,
-    val visibility: String,
-    val forks: Long,
-    @SerialName("open_issues")
-    val openIssues: Long,
-    val watchers: Long,
-    @SerialName("default_branch")
-    val defaultBranch: String,
-    val score: Double,
 )

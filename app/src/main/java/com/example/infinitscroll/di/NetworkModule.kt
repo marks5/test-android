@@ -29,6 +29,8 @@ object NetworkModule {
             .build()
     }
 
+    @Provides
+    @Singleton
     fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
         val contentType = MediaType.get("application/json")
         val json = Json {
