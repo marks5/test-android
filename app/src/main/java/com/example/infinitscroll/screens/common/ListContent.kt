@@ -163,10 +163,17 @@ fun RepoItem(repo: Repo) {
             Text(
                 text = buildAnnotatedString {
                     append("Author: ")
-                    withStyle(style = SpanStyle(fontWeight = FontWeight.Black)) {
-                        repo.fullName?.let { append(it) }
-                    }
+                    repo.fullName?.let { append(it) }
                 },
+                color = Color.White,
+                fontSize = MaterialTheme.typography.caption.fontSize,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis
+            )
+            Text(
+                text = buildAnnotatedString {
+                append("Language: Kotlin")
+            },
                 color = Color.White,
                 fontSize = MaterialTheme.typography.caption.fontSize,
                 maxLines = 1,
